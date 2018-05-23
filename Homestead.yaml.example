@@ -1,0 +1,20 @@
+---
+ip: "192.168.10.10"
+memory: 2048
+cpus: 1
+provider: virtualbox
+
+authorize: ~/.ssh/id_rsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+
+folders:
+    - map: ~/laravel/laravel-exp
+      to: /home/vagrant/laravel-exp
+sites:
+    - map: laravel.exp
+      to: /home/vagrant/laravel-exp/public
+
+databases:
+    - homestead
